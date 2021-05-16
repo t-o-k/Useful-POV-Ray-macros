@@ -1,1 +1,1 @@
-# Useful-POV-Ray-macros
+# Useful POV-Ray macros
