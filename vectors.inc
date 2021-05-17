@@ -164,7 +164,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
         #local vN = vnormalize(vP);
     #end // if
 
-   vN
+    vN
 
 #end // macro AltOrthogonalVector
 
@@ -226,13 +226,13 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #end // macro VectorInverseTransform
 
 
-#macro MatrixTransform(vX, vY, Vz, pT)
+#macro MatrixTransform(vX, vY, vZ, pT)
 
     transform {
         matrix <
             vX.x, vX.y, vX.z,
             vY.x, vY.y, vY.z,
-            Vz.x, Vz.y, Vz.z,
+            vZ.x, vZ.y, vZ.z,
             pT.x, pT.y, pT.z
         >
     }
