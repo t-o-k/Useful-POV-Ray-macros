@@ -50,27 +50,21 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro VectorCos(vA, vB)
 
-    #local Dot = vdot(vnormalize(vA), vnormalize(vB));
-
-    min(max(-1, Dot), +1)
+    min(max(-1, vdot(vnormalize(vA), vnormalize(vB))), +1)
 
 #end // macro VectorCos
 
 
 #macro VectorSin(vA, vB)
 
-    #local vCross = vcross(vnormalize(vA), vnormalize(vB));
-
-    min(vlength(vCross), +1)
+    min(vlength(vcross(vnormalize(vA), vnormalize(vB))), +1)
 
 #end // macro VectorSin
 
 
 #macro AngleBetweenVectors(vA, vB)
 
-    #local Dot = vdot(vnormalize(vA), vnormalize(vB));
-
-    acos(min(max(-1, Dot ), +1))
+    acos(min(max(-1, vdot(vnormalize(vA), vnormalize(vB))), +1))
 
 #end // macro AngleBetweenVectors
 
@@ -104,9 +98,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro ScalarReject(vA, vB)
 
-    #local vP = vcross(vB, vcross(vA, vB));
-
-    vdot(vA, vnormalize(vP))
+    vdot(vA, vnormalize(vcross(vB, vcross(vA, vB))))
 
 #end // macro ScalarReject
 
