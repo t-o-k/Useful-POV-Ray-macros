@@ -191,11 +191,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
     #local Cos = vdot(vF, vT);
     #local Sin = vlength(vAxis);
     #if (Sin = 0)
-        #if (Cos < 0)
-            #local vR = -v0;
-        #else
-            #local vR = +v0;
-        #end // if
+        #local vR = (Cos < 0 ? -v0 : +v0);
     #else
         #local vA = vAxis/Sin;
         #local v1 = vcross(v0, vA);
