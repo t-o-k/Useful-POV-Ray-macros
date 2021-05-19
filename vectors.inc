@@ -231,6 +231,23 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #end // macro MatrixTransform
 
 
+#macro VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
+
+  #declare pT = TransformFn(0, 0, 0);
+  #declare vX = TransformFn(1, 0, 0) - pT;
+  #declare vY = TransformFn(0, 1, 0) - pT;
+  #declare vZ = TransformFn(0, 0, 1) - pT;
+
+#end // macro VectorsFromTransformFunction
+
+
+#macro VectorsFromTransform(Transform, vX, vY, vZ, pT)
+
+    VectorsFromTransformFunction(function { transform { Transform } }, vX, vY, vZ, pT)
+
+#end // macro VectorsFromTransform
+
+
 #macro AxisRotateTransform(vAxis, Angle)
 
     MatrixTransform(
