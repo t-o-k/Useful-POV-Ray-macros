@@ -217,18 +217,14 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro VectorTransform(v0, Transform)
 
-    #local Fn = function { transform { Transform } };
-
-    Fn(v0.x, v0.y, v0.z)
+    FunctionValue(function { transform { Transform } }, v0)
 
 #end // macro VectorTransform
 
 
 #macro VectorInverseTransform(v0, Transform)
 
-    #local Fn = function { transform { Transform inverse } };
-
-    Fn(v0.x, v0.y, v0.z)
+    FunctionValue(function { transform { Transform inverse } }, v0)
 
 #end // macro VectorInverseTransform
 
