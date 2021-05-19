@@ -208,6 +208,13 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #end // macro VectorReorient
 
 
+#macro FunctionValue(Fn, v0)
+
+    Fn(v0.x, v0.y, v0.z)
+
+#end // macro FunctionValue
+
+
 #macro VectorTransform(v0, Transform)
 
     #local Fn = function { transform { Transform } };
