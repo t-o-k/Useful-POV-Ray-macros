@@ -128,9 +128,38 @@ The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular
 
 Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the tranform function TransformFn().
 
+Vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local or #declare before calling the macro.
+
+Example:
+
+    #declare ReorientTransformFn = function { ReorientTransform(x - z, y) };
+    #declare v_X = 0*x;
+    #declare v_Y = 0*y;
+    #declare v_Z = 0*z;
+    #declare p_T = <0, 0, 0>;
+    VectorsFromTransformFunction(ReorientTransformFn, v_X, v_Y, v_Z, p_T)
+    // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
+
 ## VectorsFromTransform(Transform, vX, vY, vZ, pT)
 
 Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the tranform Transform.
+
+The vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local (local scope) or #declare (global scope) before calling the macro.
+
+Example:
+
+    #local ScaleAndRotateTransform =
+        transform {
+            scale <+3, -1, +2>
+            AxisRotateTransform(<+1, +1, +1>, 30)
+            translate <-2, +4, -2>
+        }
+    #local v_X = <0, 0, 0>;
+    #local v_Y = <0, 0, 0>;
+    #local v_Z = <0, 0, 0>;
+    #local p_T = <0, 0, 0>;
+    VectorsFromTransform(ScaleAndRotateTransform, v_X, v_Y, v_Z, p_T)
+    // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
 
 ## AxisRotateTransform(vAxis, Angle)
 
