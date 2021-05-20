@@ -138,6 +138,6 @@ Note that direction of rotations in POV-Ray's left handed coordinate system is o
 
 ## ReorientTransform(vFrom, vTo)
 
-Creates a transformation that is a reorientation from the vector vFom to the vector vTo
+Creates a transformation that is a reorientation from the vector vFrom to the vector vTo
 
 The vectors vFrom and vTo must not be antiparallel
