@@ -148,7 +148,7 @@ The vectors that are passed as arguments are set to new values. Variables for th
 
 Example:
 
-    #local SomeTransform =
+    #local CompoundTransform =
         transform {
             scale <+3, -1, +2>
             AxisRotateTransform(<+1, +1, +1>, 30)
@@ -158,7 +158,7 @@ Example:
     #local v_Y = < 0,  0,  0>;
     #local v_Z = < 0,  0,  0>;
     #local p_T = < 0,  0,  0>;
-    VectorsFromTransform(SomeTransform, v_X, v_Y, v_Z, p_T)
+    VectorsFromTransform(CompoundTransform, v_X, v_Y, v_Z, p_T)
     // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
 
 ## AxisRotateTransform(vAxis, Angle)
