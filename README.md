@@ -136,7 +136,7 @@ Example:
     #declare v_X = 0*x;
     #declare v_Y = 0*y;
     #declare v_Z = 0*z;
-    #declare p_T = +0*x +0*y +0*z;
+    #declare p_T = 0*x + 0*y + 0*z;
     VectorsFromTransformFunction(ReorientTransformFn, v_X, v_Y, v_Z, p_T)
     // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
 
