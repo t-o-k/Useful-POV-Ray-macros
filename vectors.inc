@@ -74,10 +74,10 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro AccurateAngleBetweenVectors(v1, v2)
 
-     #local v1n = vnormalize(v1);
-     #local v2n = vnormalize(v2);
+    #local v1n = vnormalize(v1);
+    #local v2n = vnormalize(v2);
 
-     (2*atan2(vlength(v1n - v2n), vlength(v1n + v2n)))
+    (2*atan2(vlength(v1n - v2n), vlength(v1n + v2n)))
 
 #end // macro AccurateAngleBetweenVectors
 
@@ -112,22 +112,22 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro OrthogonalVector(v0)
 
-   #if (vlength(v0) = 0)
-      #local vN = <0, 0, 0>;
-   #else
-      #local Dm = min(abs(v0.x), abs(v0.y), abs(v0.z));
-      #if (abs(v0.z) = Dm)
-         #local vN = vnormalize(vcross(v0, z));
-      #else
-         #if (abs(v0.y) = Dm)
-            #local vN = vnormalize(vcross(v0, y));
-         #else
-            #local vN = vnormalize(vcross(v0, x));
-         #end // if
-      #end // if
-   #end // if
+    #if (vlength(v0) = 0)
+        #local vN = <0, 0, 0>;
+    #else
+        #local Dm = min(abs(v0.x), abs(v0.y), abs(v0.z));
+        #if (abs(v0.z) = Dm)
+            #local vN = vnormalize(vcross(v0, z));
+        #else
+            #if (abs(v0.y) = Dm)
+                #local vN = vnormalize(vcross(v0, y));
+            #else
+                #local vN = vnormalize(vcross(v0, x));
+            #end // if
+        #end // if
+    #end // if
 
-   vN
+    vN
 
 #end // macro OrthogonalVector
 
@@ -233,10 +233,10 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
-  #declare pT = TransformFn(0, 0, 0);
-  #declare vX = TransformFn(1, 0, 0) - pT;
-  #declare vY = TransformFn(0, 1, 0) - pT;
-  #declare vZ = TransformFn(0, 0, 1) - pT;
+    #declare pT = TransformFn(0, 0, 0);
+    #declare vX = TransformFn(1, 0, 0) - pT;
+    #declare vY = TransformFn(0, 1, 0) - pT;
+    #declare vZ = TransformFn(0, 0, 1) - pT;
 
 #end // macro VectorsFromTransformFunction
 
