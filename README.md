@@ -136,7 +136,7 @@ Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the t
 
 Creates a transformation that is a rotation around the vector vAxis by the angle Angle in degrees.
 
-Note that direction of rotations in POV-Ray's left handed coordinate system is opposite of the direction for rotations in right handed cordinate systems.
+Note that direction of rotations in POV-Ray's left handed coordinate system is opposite of the direction of rotations in right handed cordinate systems.
 
 ## ReorientTransform(vFrom, vTo)
 
