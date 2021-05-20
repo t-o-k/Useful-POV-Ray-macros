@@ -102,7 +102,7 @@ https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
 
 Calculates the reorientation transformation from the vector vFrom to the vector vTo applied to the vector v0
 
-## FunctionValue(v0)
+## FunctionValue(Fn, v0)
 
 Evaluates the function Fn() at the coordinates in the v0 vector
 
