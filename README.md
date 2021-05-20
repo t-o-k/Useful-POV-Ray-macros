@@ -98,6 +98,8 @@ Note that direction of rotation in POV-Ray's left handed coordinate system is op
 
 https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
 
+Note that POV-Ray has a built in vector operator; vaxis_rotate() that should be used instead.
+
 ## VectorReorient(v0, vFrom, vTo)
 
 Calculates the reorientation transformation from the vector vFrom to the vector vTo applied to the vector v0
