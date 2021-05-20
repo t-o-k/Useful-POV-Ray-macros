@@ -92,7 +92,7 @@ If v0 is the zero vector then the resulting vector is also the zero vector.
 
 Calculates the rotation of the vector v0 around the vector vAxis by the angle Angle in degrees.
 
-Note that direction of rotation in POV-Ray's left handed coordinate system is opposite of rotations in right handed corrdinate systems.
+Note that direction of rotation in POV-Ray's left handed coordinate system is opposite of rotations in right handed coordinate systems.
 
 (The sign of the sine part in the macro is therefore negative.)
 
@@ -126,7 +126,7 @@ The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular
 
 ## VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
-Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the tranform function TransformFn().
+Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the transform function TransformFn().
 
 Vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local or #declare before calling the macro.
 
@@ -142,7 +142,7 @@ Example:
 
 ## VectorsFromTransform(Transform, vX, vY, vZ, pT)
 
-Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the tranform Transform.
+Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the transform Transform.
 
 The vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local (local scope) or #declare (global scope) before calling the macro.
 
@@ -165,7 +165,7 @@ Example:
 
 Creates a transformation that is a rotation around the vector vAxis by the angle Angle in degrees.
 
-Note that direction of rotations in POV-Ray's left handed coordinate system is opposite of the direction of rotations in right handed cordinate systems.
+Note that direction of rotations in POV-Ray's left handed coordinate system is opposite of the direction of rotations in right handed coordinate systems.
 
 ## ReorientTransform(vFrom, vTo)
 
