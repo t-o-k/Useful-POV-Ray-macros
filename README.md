@@ -102,7 +102,7 @@ Note that POV-Ray has a built in vector operator; vaxis_rotate() that should be 
 
 ## VectorReorient(v0, vFrom, vTo)
 
-Calculates the reorientation transformation from the vector vFrom to the vector vTo applied to the vector v0.
+Calculates the result of the reorientation transformation from the vector vFrom to the vector vTo applied to the vector v0.
 
 ## FunctionValue(Fn, v0)
 
@@ -112,11 +112,11 @@ It works with both regular trivariate functions and transform functions.
 
 ## VectorTransform(v0, Transform)
 
-Calculates the transformation Transform applied to the vector v0.
+Calculates result of the transformation Transform applied to the vector v0.
 
 ## VectorInverseTransform(v0, Transform)
 
-Calculates the inverse of the transformation Transform applied to the vector v0.
+Calculates result of the inverse of the transformation Transform applied to the vector v0.
 
 ## MatrixTransform(vX, vY, vZ, pT)
 
