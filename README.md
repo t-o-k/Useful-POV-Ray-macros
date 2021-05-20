@@ -154,10 +154,10 @@ Example:
             AxisRotateTransform(<+1, +1, +1>, 30)
             translate <-2, +4, -2>
         }
-    #local v_X = <0, 0, 0>;
-    #local v_Y = <0, 0, 0>;
-    #local v_Z = <0, 0, 0>;
-    #local p_T = <0, 0, 0>;
+    #local v_X = < 0,  0,  0>;
+    #local v_Y = < 0,  0,  0>;
+    #local v_Z = < 0,  0,  0>;
+    #local p_T = < 0,  0,  0>;
     VectorsFromTransform(SomeTransform, v_X, v_Y, v_Z, p_T)
     // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
 
