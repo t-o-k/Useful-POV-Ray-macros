@@ -108,7 +108,7 @@ Calculates the result of the reorientation transformation from the vector vFrom 
 
 Evaluates the function Fn() at the coordinates in the v0 vector.
 
-It works with both regular trivariate functions and transform functions.
+It works with both regular trivariate functions, transform functions and pattern functions.
 
 ## VectorTransform(v0, Transform)
 
