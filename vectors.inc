@@ -72,12 +72,12 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 // Use this version if the vectors may be almost parallel or antiparallel
 // The version above is faster
 
-#macro AccurateAngleBetweenVectors(v1, v2)
+#macro AccurateAngleBetweenVectors(vA, vB)
 
-    #local v1n = vnormalize(v1);
-    #local v2n = vnormalize(v2);
+    #local vAn = vnormalize(vA);
+    #local vBn = vnormalize(vB);
 
-    (2*atan2(vlength(v1n - v2n), vlength(v1n + v2n)))
+    (2*atan2(vlength(vAn - vBn), vlength(vAn + vBn)))
 
 #end // macro AccurateAngleBetweenVectors
 
