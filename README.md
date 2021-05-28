@@ -42,9 +42,9 @@ The result is in radians between 0 and +pi, including the limits.
 
 https://en.wikipedia.org/wiki/Dot_product#Geometric_definition
 
-## AccurateAngleBetweenVectors(v1, v2)
+## AccurateAngleBetweenVectors(vA, vB)
 
-Calculates the smallest angle between the vectors v1 and v2.
+Calculates the smallest angle between the vectors vA and vB.
 
 The result is in radians between 0 and +pi, including the limits.
 
