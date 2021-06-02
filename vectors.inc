@@ -217,7 +217,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #end // macro VectorInverseTransform
 
 
-#macro MatrixTransform(vX, vY, vZ, pT)
+#macro TransformFromVectors(vX, vY, vZ, pT)
 
     transform {
         matrix <
@@ -228,14 +228,14 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
         >
     }
 
-#end // macro MatrixTransform
+#end // macro TransformFromVectors
 
 
 #macro TransformFromTransformFunction(TransformFn)
 
     #local pT = TransformFn(0, 0, 0);
 
-    MatrixTransform(
+    TransformFromVectors(
         TransformFn(1, 0, 0) - pT,
         TransformFn(0, 1, 0) - pT,
         TransformFn(0, 0, 1) - pT,
@@ -254,7 +254,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro TransformFunctionFromVectors(vX, vY, vZ, pT)
 
-    function { MatrixTransform(vX, vY, vZ, pT) }
+    function { TransformFromVectors(vX, vY, vZ, pT) }
 
 #end // macro TransformFunctionFromVectors
 
@@ -278,7 +278,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 #macro AxisRotateTransform(vAxis, Angle)
 
-    MatrixTransform(
+    TransformFromVectors(
         vaxis_rotate(x, vAxis, Angle),
         vaxis_rotate(y, vAxis, Angle),
         vaxis_rotate(z, vAxis, Angle),
@@ -296,7 +296,7 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
     #local Dot = min(max(-1, vdot(vF, vT)), +1);
     #local Angle = degrees(acos(Dot));
 
-    MatrixTransform(
+    TransformFromVectors(
         vaxis_rotate(x, vAxis, Angle),
         vaxis_rotate(y, vAxis, Angle),
         vaxis_rotate(z, vAxis, Angle),
