@@ -231,6 +231,20 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #end // macro MatrixTransform
 
 
+#macro TransformFromTransformFunction(TransformFn)
+
+    #local pT = TransformFn(0, 0, 0);
+
+    MatrixTransform(
+        TransformFn(1, 0, 0) - pT,
+        TransformFn(0, 1, 0) - pT,
+        TransformFn(0, 0, 1) - pT,
+        pT
+    )
+
+#end // macro TransformFromTransformFunction
+
+
 #macro VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
     #declare pT = TransformFn(0, 0, 0);
