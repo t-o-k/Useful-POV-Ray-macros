@@ -133,7 +133,10 @@ Vectors that are passed as arguments are set to new values. Variables for these 
 Example:
 
     #declare ReorientTransformFn = function { ReorientTransform(x - z, y) };
-    #declare (v_X, v_Y, v_Z, p_T) = (0*x, 0*y, 0*z, 0*x + 0*y + 0*z);
+    #declare v_X = 0*x;
+    #declare v_Y = 0*y;
+    #declare v_Z = 0*z;
+    #declare p_T = 0*x + 0*y + 0*z;
     VectorsFromTransformFunction(ReorientTransformFn, v_X, v_Y, v_Z, p_T)
     // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
 
@@ -151,7 +154,10 @@ Example:
             AxisRotateTransform(<+1, +1, +1>, 30)
             translate <-2, +4, -2>
         }
-    #local (v_X, v_Y, v_Z, p_T) = (<0, 0, 0>, <0, 0, 0>, <0, 0, 0>, <0, 0, 0>);
+    #local v_X = < 0,  0,  0>;
+    #local v_Y = < 0,  0,  0>;
+    #local v_Z = < 0,  0,  0>;
+    #local p_T = < 0,  0,  0>;
     VectorsFromTransform(CompoundTransform, v_X, v_Y, v_Z, p_T)
     // The vectors v_X, v_Y, v_Z and p_T have now been set to the calculated vectors
 
