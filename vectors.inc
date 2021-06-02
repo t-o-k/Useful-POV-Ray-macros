@@ -245,6 +245,13 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #end // macro TransformFromTransformFunction
 
 
+#macro TransformFunctionFromTransform(Transform)
+
+    function { transform { Transform } }
+
+#end // macro TransformFunctionFromTransform
+
+
 #macro VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
     #declare pT = TransformFn(0, 0, 0);
