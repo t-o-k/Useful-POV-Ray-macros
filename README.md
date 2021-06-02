@@ -124,6 +124,10 @@ Creates a tranformation given by a 4x3 matrix consiting of the row vectors vX, v
 
 The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular.
 
+## TransformFromTransformFunction(TransformFn)
+
+Creates a transformation from the transformation inherent in the transform function TransformFn().
+
 ## VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
 Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the transform function TransformFn().
