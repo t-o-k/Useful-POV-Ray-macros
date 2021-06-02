@@ -82,11 +82,15 @@ Calculates, if possible, a normalized vector that is orthogonal to vector v0.
 
 If v0 is the zero vector then the resulting vector is also the zero vector.
 
+If the same vector is passed to both the OrthogonalVector() macro and the AltOrthogonalVector() macro, the returned vectors are orthogonal to each other in addition to being orthogonal to the vector passed to the macros.
+
 ## AltOrthogonalVector(v0)
 
 Calculates, if possible, a normalized vector that is orthogonal to vector v0.
 
 If v0 is the zero vector then the resulting vector is also the zero vector.
+
+If the same vector is passed to both the AltOrthogonalVector() macro and the OrthogonalVector() macro, the returned vectors are orthogonal to each other in addition to being orthogonal to the vector passed to the macros.
 
 ## VectorAxisRotate(v0, vAxis, Angle)
 
