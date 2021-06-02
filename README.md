@@ -118,7 +118,7 @@ Calculates result of the transformation Transform applied to the vector v0.
 
 Calculates result of the inverse of the transformation Transform applied to the vector v0.
 
-## MatrixTransform(vX, vY, vZ, pT)
+## TransformFromVectors(vX, vY, vZ, pT)
 
 Creates a tranformation given by a 4x3 matrix consiting of the row vectors vX, vY, vZ and pT.
 
