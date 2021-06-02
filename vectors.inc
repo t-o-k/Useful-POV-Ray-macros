@@ -137,14 +137,14 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 #macro AltOrthogonalVector(v0)
 
     #switch (min(abs(v0.x), abs(v0.y), abs(v0.z)))
-        #case (abs(v0.x))
-            #local vE = x;
+        #case (abs(v0.z))
+            #local vE = z;
             #break
         #case (abs(v0.y))
             #local vE = y;
             #break
-        #case (abs(v0.z))
-            #local vE = z;
+        #case (abs(v0.x))
+            #local vE = x;
             #break
         #else
             #local vE = <0, 0, 0>;
