@@ -156,7 +156,9 @@ The determinand can be calculated with the ScalarTripleProduct() macro.
 
 Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the transform function TransformFn().
 
-Vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local or #declare before calling the macro.
+The vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local or #declare before calling the macro.
+
+The 3x3 matrix represented by the resulting vX, vY and vZ vectors is always invertible (i.e. not singular).
 
 Example:
 
@@ -173,6 +175,8 @@ Example:
 Extracts the row vectors vX, vY, vZ and pT from the 4x3 matrix inherent in the transform Transform.
 
 The vectors that are passed as arguments are set to new values. Variables for these vectors can be declared with either #local (local scope) or #declare (global scope) before calling the macro.
+
+The 3x3 matrix represented by the resulting vX, vY and vZ vectors is always invertible (i.e. not singular).
 
 Example:
 
