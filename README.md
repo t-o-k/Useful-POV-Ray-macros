@@ -5,6 +5,7 @@ The include file vectors.inc for POV-Ray v3.7 contains these macros related to 3
 ## ScalarTripleProduct(vA, vB, vC)
 
 Calculates the scalar triple product of the vectors vA, vB and vC.
+It is equal to the determinand of the matrix represented by the row (or column) vectors vA, vB and vC.
 
 https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product
 
@@ -140,7 +141,7 @@ Creates a transform function from the transformation Transform.
 
 Creates a tranform function from the transformation given by a 4x3 matrix consiting of the row vectors vX, vY, vZ and pT.
 
-The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular.
+The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular. 
 
 ## VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
