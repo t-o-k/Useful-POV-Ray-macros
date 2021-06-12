@@ -49,7 +49,7 @@ Calculates the smallest angle between the vectors vA and vB.
 
 The result is in radians between 0 and +pi, including the limits.
 
-It is more accurate than the AngleBetweenVectors if the vectors are almost parallel or almost antiparallel.
+It is more accurate than the AngleBetweenVectors() macro if the vectors are almost parallel or almost antiparallel.
 
 ## ScalarProject(vA, vB)
 
