@@ -128,6 +128,8 @@ Calculates result of the inverse of the transformation Transform applied to the 
 Creates a tranformation given by a 4x3 matrix consiting of the row vectors vX, vY, vZ and pT.
 
 The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular.
+I.e. the determinand of this matrix must not be zero.
+The determinand can be calculated with the ScalarTripleProduct() macro.
 
 ## TransformFromTransformFunction(TransformFn)
 
@@ -141,7 +143,9 @@ Creates a transform function from the transformation Transform.
 
 Creates a tranform function from the transformation given by a 4x3 matrix consiting of the row vectors vX, vY, vZ and pT.
 
-The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular. 
+The 3x3 matrix represented by the row vectors vX, vY and vZ must not be singular.
+I.e. the determinand of this matrix must not be zero.
+The determinand can be calculated with the ScalarTripleProduct() macro.
 
 ## VectorsFromTransformFunction(TransformFn, vX, vY, vZ, pT)
 
