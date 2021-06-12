@@ -84,7 +84,7 @@ https://en.wikipedia.org/wiki/Vector_projection#Vector_rejection
 
 ## OrthogonalVector(v0)
 
-Calculates, if possible, a normalized vector that is orthogonal to vector v0.
+Calculates, if possible, a normalized vector that is orthogonal to the vector v0.
 
 If v0 is the zero vector then the resulting vector is also the zero vector.
 
@@ -92,7 +92,7 @@ If the same vector is passed to both the OrthogonalVector() macro and the AltOrt
 
 ## AltOrthogonalVector(v0)
 
-Calculates, if possible, a normalized vector that is orthogonal to vector v0.
+Calculates, if possible, a normalized vector that is orthogonal to the vector v0.
 
 If v0 is the zero vector then the resulting vector is also the zero vector.
 
