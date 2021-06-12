@@ -22,6 +22,8 @@ Calculates the cosine of the smallest angle between the vectors vA and vB.
 
 The result is between -1 and +1, including the limits.
 
+If vA and vB are parallel the result is +1 and if they are antiparallel the result is -1. If they are orthogonal the result is 0.
+
 https://en.wikipedia.org/wiki/Multiplication_of_vectors
 
 https://en.wikipedia.org/wiki/Dot_product#Geometric_definition
@@ -31,6 +33,8 @@ https://en.wikipedia.org/wiki/Dot_product#Geometric_definition
 Calculates the sine of the smallest angle between the vectors vA and vB.
 
 The result is between 0 and +1, including the limits.
+
+If vA and vB are parallel or antiparallel the result is 0. If they are orthogonal the result is +1.
 
 https://en.wikipedia.org/wiki/Multiplication_of_vectors
 
