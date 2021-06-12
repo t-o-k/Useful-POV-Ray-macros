@@ -5,6 +5,7 @@ The include file vectors.inc for POV-Ray v3.7 contains these macros related to 3
 ## ScalarTripleProduct(vA, vB, vC)
 
 Calculates the scalar triple product of the vectors vA, vB and vC.
+
 It is equal to the determinand of the matrix represented by the row (or column) vectors vA, vB and vC.
 
 https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product
