@@ -2,7 +2,7 @@
 /*
 
 https://github.com/t-o-k/Useful-POV-Ray-macros
-Copyright (c) 2021 Tor Olav Kristensen, http://subcube.com
+Copyright (c) 2021-2024 Tor Olav Kristensen, http://subcube.com
 Use of this source code is governed by the GNU Lesser General Public License version 3,
 which can be found in the LICENSE file.
 
@@ -71,6 +71,10 @@ https://en.wikipedia.org/wiki/Euler%E2%80%93Rodrigues_formula
 
 // Use this version if the vectors may be almost parallel or antiparallel
 // The version above is faster
+/*
+Kahan, W. (2016): Computing Cross-Products and Rotations in 2- and 3-Dimensional Euclidean Spaces
+https://people.eecs.berkeley.edu/~wkahan/MathH110/Cross.pdf
+*/
 
 #macro AccurateAngleBetweenVectors(vA, vB)
 
