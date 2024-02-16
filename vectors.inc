@@ -296,16 +296,26 @@ https://people.eecs.berkeley.edu/~wkahan/MathH110/Cross.pdf
 
     #local vF = vnormalize(vFrom);
     #local vT = vnormalize(vTo);
-    #local vAxis = vcross(vF, vT);
     #local Dot = min(max(-1, vdot(vF, vT)), +1);
-    #local Angle = degrees(acos(Dot));
+    #if (abs(Dot) = 1)
+        #if (Dot = +1)
+            #local Transform = transform { }
+        #else
+            #local Transform = transform { scale -<1, 1, 1> }
+        #end // if
+    #else
+        #local vAxis = vcross(vF, vT);
+        #local Angle = degrees(acos(Dot));
+        #local Transform =
+            TransformFromVectors(
+                vaxis_rotate(x, vAxis, Angle),
+                vaxis_rotate(y, vAxis, Angle),
+                vaxis_rotate(z, vAxis, Angle),
+                <0, 0, 0>
+            )
+    #end // if
 
-    TransformFromVectors(
-        vaxis_rotate(x, vAxis, Angle),
-        vaxis_rotate(y, vAxis, Angle),
-        vaxis_rotate(z, vAxis, Angle),
-        <0, 0, 0>
-    )
+    Transform
 
 #end // macro ReorientTransform
 
